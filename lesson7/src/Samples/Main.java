@@ -7,5 +7,4 @@ public class Main {
         System.out.println("Start example");
         MyUnit.start(TestClass.class);
     }
-
 }

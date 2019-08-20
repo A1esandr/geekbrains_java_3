@@ -43,16 +43,16 @@ public class MyUnit {
             Object instance = testClass.newInstance();
             Object[] args = new Object[0];
 
-            beforeSuites.get(0).invoke(instance , args);
+            beforeSuites.get(0).invoke(instance, args);
             for(int i = 10; i > 0; i--){
                 if(tests.get(i) != null && tests.get(i).size() > 0){
                     for(Method m : tests.get(i)){
-                        m.invoke(instance , args);
+                        m.invoke(instance, args);
                     }
                 }
             }
-            afterSuites.get(0).invoke(instance , args);
-            
+            afterSuites.get(0).invoke(instance, args);
+
             System.out.println("Tests passed");
         } catch(Exception e){
             throw new RuntimeException(e.getMessage());
